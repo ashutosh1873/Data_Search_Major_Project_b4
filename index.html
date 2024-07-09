@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Search Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Search Student Data</h1>
+        <form id="searchForm">
+            <label for="rollNoSearch">Enter Roll No:</label>
+            <input type="text" id="rollNoSearch" name="rollNoSearch" required>
+            <button type="submit">Search</button>
+	    <button type="button" onclick="clearForm()">Clear</button>
+        </form>
+
+        <div id="searchResults" style="display: none;">
+            <h3>Search Results</h3>
+            <label for="topic">Project Topic:</label>
+            <input type="text" id="topic" readonly>
+            <br>
+
+            <label for="description">Project Description:</label>
+	    <br>
+            <textarea id="description" readonly></textarea>
+	    <br>
+
+            <label for="groupMembers">Number of Group Members:</label>
+            <input type="text" id="groupMembers" readonly>
+	    <br>
+
+            <label for="rollNo1">Roll No 1:</label>
+            <input type="text" id="rollNo1" readonly>
+	    <br>
+
+            <label for="name1">Name 1:</label>
+            <input type="text" id="name1" readonly>
+	    <br>
+
+            <div id="member2" style="display: none;">
+                <label for="rollNo2">Roll No 2:</label>
+                <input type="text" id="rollNo2" readonly>
+		<br>
+
+                <label for="name2">Name 2:</label>
+                <input type="text" id="name2" readonly>
+            </div>
+        </div>
+
+        <div id="loading" class="loading-overlay">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Loading...</div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
